@@ -38,7 +38,7 @@ mongoose.connect(db)
 const jwtPrivateKey = process.env.jwtPrivateKey;
 
 
-const port = process.env.port;
+const port = process.env.port || process.env.PORT;
 
 app.listen(port, function(){
     console.log("Connected to backend");
